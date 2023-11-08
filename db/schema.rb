@@ -10,5 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 0) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_08_202557) do
+  create_table "pokemons", force: :cascade do |t|
+    t.string "name"
+    t.integer "order"
+    t.integer "base_experience"
+    t.integer "height"
+    t.integer "weight"
+    t.string "types"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_pokemons_on_name", unique: true
+  end
+
 end
