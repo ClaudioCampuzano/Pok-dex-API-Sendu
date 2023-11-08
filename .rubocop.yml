@@ -67,4 +67,5 @@ Style/GlobalVars:
     - config/initializers/_REDIS.rb
 Metrics/BlockLength:
   Exclude:
-    - config/environments/development.rb
+    - '**/*.rb'
+    - '**/*.rake'
