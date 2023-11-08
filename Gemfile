@@ -11,6 +11,7 @@ gem "sqlite3", "~> 1.4"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 group :development do
+  gem 'annotate'
 end
 
 group :test do
