@@ -4,6 +4,7 @@ source "https://rubygems.org"
 
 ruby "3.2.2"
 
+gem 'active_model_serializers'
 gem "bootsnap", require: false
 gem "puma", ">= 5.0"
 gem "rails", "~> 7.1.1"
@@ -15,6 +16,7 @@ group :development do
 end
 
 group :test do
+  gem 'rails-controller-testing'
   gem 'shoulda-matchers', '~> 5.0'
 end
 
