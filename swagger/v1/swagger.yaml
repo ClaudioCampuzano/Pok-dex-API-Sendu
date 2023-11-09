@@ -1,0 +1,114 @@
+---
+openapi: 3.0.1
+info:
+  title: Pokemon Api SENDU
+  version: v1
+paths:
+  "/api/v1/pokemons":
+    get:
+      summary: ''
+      description: Retrieve a list of all Pokemons
+      responses:
+        '200':
+          description: All pokemon retrieved
+    post:
+      summary: ''
+      description: Create a new Pokemon
+      parameters: []
+      responses:
+        '201':
+          description: Pokemon created
+        '409':
+          description: Problems creating pokemon
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  default: ditto
+                types:
+                  type: string
+                  default: normal,poison
+                weight:
+                  type: integer
+                  default: 40
+                height:
+                  type: integer
+                  default: 3
+                order:
+                  type: integer
+                  default: 214
+                base_experience:
+                  type: string
+                  default: 101
+              required:
+              - name
+              - types
+              - weight
+              - height
+              - order
+              - base_experience
+  "/api/v1/pokemons/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: ID or name of the Pokemon
+      default: ditto
+      required: true
+      schema:
+        type: string
+    get:
+      summary: ''
+      description: Retrieve details of a specific Pokemon
+      responses:
+        '200':
+          description: Pokemon find
+        '404':
+          description: Pokemon not found
+    put:
+      summary: ''
+      description: Update an existing Pokemon
+      parameters: []
+      responses:
+        '200':
+          description: Pokemon updated
+        '404':
+          description: Pokemon not found
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                types:
+                  type: string
+                  default: electric
+                weight:
+                  type: integer
+                  default: 40
+                height:
+                  type: integer
+                  default: 10
+                order:
+                  type: integer
+                  default: 350
+                base_experience:
+                  type: string
+                  default: 5
+              required: []
+    delete:
+      summary: ''
+      description: Delete a Pokemon
+      responses:
+        '204':
+          description: Pokemon deleted
+        '404':
+          description: Pokemon not found
+servers:
+- url: http://localhost:3000
+  variables:
+    defaultHost:
+      default: localhost:3000
