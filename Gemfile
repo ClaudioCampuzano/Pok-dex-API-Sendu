@@ -8,6 +8,7 @@ gem 'active_model_serializers'
 gem "bootsnap", require: false
 gem "puma", ">= 5.0"
 gem "rails", "~> 7.1.1"
+gem 'rswag'
 gem "sqlite3", "~> 1.4"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
