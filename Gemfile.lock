@@ -112,6 +112,11 @@ GEM
       railties (>= 5.0.0)
     faker (3.1.0)
       i18n (>= 1.8.11, < 2)
+    faraday (2.7.11)
+      base64
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -275,8 +280,17 @@ GEM
     sqlite3 (1.6.8-aarch64-linux)
     sqlite3 (1.6.8-x86_64-linux)
     stringio (3.0.9)
+    strings-ansi (0.2.0)
     thor (1.3.0)
+    timecop (0.9.8)
     timeout (0.4.1)
+    tty-cursor (0.7.1)
+    tty-progressbar (0.18.2)
+      strings-ansi (~> 0.2)
+      tty-cursor (~> 0.7)
+      tty-screen (~> 0.8)
+      unicode-display_width (>= 1.6, < 3.0)
+    tty-screen (0.8.1)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
@@ -297,6 +311,7 @@ DEPENDENCIES
   debug
   factory_bot_rails
   faker
+  faraday
   pry-byebug
   pry-rails
   puma (>= 5.0)
@@ -307,6 +322,8 @@ DEPENDENCIES
   rubocop-rails
   shoulda-matchers (~> 5.0)
   sqlite3 (~> 1.4)
+  timecop
+  tty-progressbar
   tzinfo-data
 
 RUBY VERSION

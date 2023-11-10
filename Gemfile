@@ -15,6 +15,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 group :development do
   gem 'annotate'
+  gem 'tty-progressbar'
 end
 
 group :test do
