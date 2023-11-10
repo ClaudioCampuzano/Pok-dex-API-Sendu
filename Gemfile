@@ -6,6 +6,7 @@ ruby "3.2.2"
 
 gem 'active_model_serializers'
 gem "bootsnap", require: false
+gem 'faraday'
 gem "puma", ">= 5.0"
 gem "rails", "~> 7.1.1"
 gem 'rswag'
