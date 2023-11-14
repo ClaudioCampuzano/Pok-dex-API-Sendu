@@ -1,0 +1,13 @@
+version: "1.0"
+
+services:
+  app:
+    build: .
+    image: pokedek-api-dev
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - .env
+    command: rails s -b 0.0.0.0 -C
+    ports:
+      - 3000:3000
